@@ -5,3 +5,6 @@ DKS/Temp/
 DKS/UserSettings/
 Library/
 UserSettings/
+.vscode/
+Logs/
+Temp/
