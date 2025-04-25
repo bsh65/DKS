@@ -8,3 +8,11 @@ UserSettings/
 .vscode/
 Logs/
 Temp/
+/DKS/Build
+/DKS/obj
+/DKS/.vs
+DKS/.vsconfig
+/DKS/Assets/Individual Assignment
+DKS/Assets/Individual Assignment.meta
+DKS/Build.zip
+DKS/Assembly-CSharp.csproj
