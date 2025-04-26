@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 5f;
+    [SerializeField] private float sensitivity = 1f;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +15,17 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        RotateCamera();
+        MovePlayer();
+    }
+
+    void RotateCamera()
+    {
+        Vector3 xRotate = new Vector3(-Input.GetAxis("Mouse Y") * sensitivity, 0, 0);
+        Vector3 yRotate = new Vector3(0, Input.GetAxis("Mouse X") * sensitivity, 0);
+
+        transform.Rotate(yRotate);
+        Camera.main.transform.Rotate(xRotate);
     }
 
     void MovePlayer()
