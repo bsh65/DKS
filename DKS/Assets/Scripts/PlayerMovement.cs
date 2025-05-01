@@ -6,6 +6,9 @@ public class PlayerMovement : MonoBehaviour
 {
     public float speed = 5f;
     [SerializeField] private float sensitivity = 1f;
+    [SerializeField] private float jumpForce = 10f;
+    private bool grounded = false;
+    [SerializeField] private float groundedCast = 1f;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,8 +18,25 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        CastGround();
         RotateCamera();
         MovePlayer();
+        Jump();
+    }
+
+    void CastGround()
+    {
+        float dist = (transform.position - GetComponent<Collider>().bounds.min).y;
+        grounded = Physics.Raycast(transform.position, -transform.up, groundedCast+dist);
+    }
+
+    void Jump()
+    {
+        if(Input.GetKeyDown(KeyCode.Space) && grounded)
+        {
+            Rigidbody rb = GetComponent<Rigidbody>();
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        }
     }
 
     void RotateCamera()
