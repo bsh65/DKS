@@ -23,7 +23,6 @@ public class InteractHandler : MonoBehaviour
             {
                 if (Input.GetMouseButtonDown(0))
                 {
-                    Debug.Log("mouse");
                     ihit.Interact(gameObject);
                 }
             }
