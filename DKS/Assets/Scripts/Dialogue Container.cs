@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.UIElements;
 
 public class DialogueContainer : MonoBehaviour
 {
@@ -26,7 +27,7 @@ public class DialogueContainer : MonoBehaviour
     }
 
     // Update is called once per frame
-    async void Update()
+    void Update()
     {
         if(trigger&&!awaitCancel)
         {

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class InteractHandler : MonoBehaviour
@@ -17,13 +18,15 @@ public class InteractHandler : MonoBehaviour
         Transform thit = look.getHit().transform;
         if (!Equals(thit,null))
         {
-            Interactable ihit = thit.GetComponent<Interactable>();
-
-            if (ihit)
+            if (Input.GetMouseButtonDown(0))
             {
-                if (Input.GetMouseButtonDown(0))
+                List<Interactable> interactables = new List<Interactable>();
+                interactables.AddRange(thit.GetComponentsInParent<Interactable>());
+                interactables.AddRange(thit.GetComponentsInChildren<Interactable>());
+                Debug.Log(interactables.ToCommaSeparatedString());
+                foreach (var inter in interactables)
                 {
-                    ihit.Interact(gameObject);
+                    inter.Interact(gameObject);
                 }
             }
         }
