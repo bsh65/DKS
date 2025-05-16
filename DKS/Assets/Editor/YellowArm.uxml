@@ -1,3 +1,4 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <ui:VisualElement name="VisualElement" style="flex-grow: 1; height: 60%; width: 30%; max-width: 30%; max-height: 60%; background-image: url(&apos;project://database/Assets/Sprites/yellow%20hand.PNG?fileID=2800000&amp;guid=339f7ee1e6da65243a23137829e961ca&amp;type=3#yellow hand&apos;); position: absolute; left: 10%; bottom: 0;" />
+    <ui:VisualElement name="YellowArm" style="flex-grow: 1;" />
 </ui:UXML>

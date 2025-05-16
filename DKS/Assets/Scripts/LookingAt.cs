@@ -10,7 +10,9 @@ public class LookingAt : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Physics.Raycast(transform.position, Camera.main.transform.forward, out hit, range);
+        Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, range);
+
+        Debug.DrawLine(Camera.main.transform.position, Camera.main.transform.forward * range, Color.red);
         //Debug.Log(hit.transform.GetComponent<Interactable>());
     }
 
