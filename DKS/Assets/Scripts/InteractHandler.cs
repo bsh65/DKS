@@ -22,7 +22,7 @@ public class InteractHandler : MonoBehaviour
             {
                 List<Interactable> interactables = new List<Interactable>();
                 interactables.AddRange(thit.GetComponentsInParent<Interactable>());
-                interactables.AddRange(thit.GetComponentsInChildren<Interactable>());
+                //interactables.AddRange(thit.GetComponentsInChildren<Interactable>());
                 Debug.Log(interactables.ToCommaSeparatedString());
                 foreach (var inter in interactables)
                 {

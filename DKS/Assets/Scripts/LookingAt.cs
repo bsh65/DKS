@@ -12,7 +12,7 @@ public class LookingAt : MonoBehaviour
     {
         Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, range);
 
-        Debug.DrawLine(Camera.main.transform.position, Camera.main.transform.forward * range, Color.red);
+        Debug.DrawLine(Camera.main.transform.position, Camera.main.transform.position+Camera.main.transform.forward * range, Color.red);
         //Debug.Log(hit.transform.GetComponent<Interactable>());
     }
 
