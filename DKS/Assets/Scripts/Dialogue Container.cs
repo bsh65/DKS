@@ -65,6 +65,7 @@ public class DialogueContainer : MonoBehaviour
 
     public void TriggerDialogue()
     {
+        Debug.Log("Trigger");
         foreach (GameObject go in enableOnTrigger)
         {
             go.SetActive(true);
