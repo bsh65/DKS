@@ -7,14 +7,17 @@ using UnityEngine.UIElements;
 
 public class DialogueContainer : MonoBehaviour
 {
+    private static int curDialogueIndex = -1;
     [SerializeField] private string text = "";
     [SerializeField] private float delay = 1f;
     [SerializeField] private bool awaitCancel = false;
     [SerializeField] private TextMeshProUGUI textUGUI;
+    [SerializeField] private bool endDialogue = false;
     [SerializeField] private List<GameObject> enableOnTrigger = new List<GameObject>();
     [SerializeField] private List<GameObject> disableOnTrigger = new List<GameObject>();
     [SerializeField] private List<GameObject> enablePostTrigger = new List<GameObject>();
     [SerializeField] private List<GameObject> disablePostTrigger = new List<GameObject>();
+    [SerializeField] private int dialogueIndex = 0;
 
     private bool trigger = false;
     private float clock = 0f;
@@ -45,12 +48,17 @@ public class DialogueContainer : MonoBehaviour
             textUGUI.text = "";
         trigger = false;
         clock = 0f;
+
+        if (endDialogue)
+            curDialogueIndex = -1;
     }
 
     public void CancelDialogue()
     {
-        if(trigger)
+
+        if (trigger)
         {
+            Reset();
             foreach (GameObject go in enablePostTrigger)
             {
                 go.SetActive(true);
@@ -59,23 +67,26 @@ public class DialogueContainer : MonoBehaviour
             {
                 go.SetActive(false);
             }
-            Reset();
         }
     }
 
     public void TriggerDialogue()
     {
-        Debug.Log("Trigger");
-        foreach (GameObject go in enableOnTrigger)
+        if (curDialogueIndex == -1 || curDialogueIndex == dialogueIndex)
         {
-            go.SetActive(true);
+            curDialogueIndex = dialogueIndex;
+            Debug.Log("Trigger");
+            foreach (GameObject go in enableOnTrigger)
+            {
+                go.SetActive(true);
+            }
+            foreach (GameObject go in disableOnTrigger)
+            {
+                go.SetActive(false);
+            }
+            if (textUGUI)
+                textUGUI.text = text;
+            trigger = true;
         }
-        foreach (GameObject go in disableOnTrigger)
-        {
-            go.SetActive(false);
-        }
-        if(textUGUI)
-            textUGUI.text = text;
-        trigger = true;
     }
 }

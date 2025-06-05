@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
 {
+    [SerializeField] private bool doCancel = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +26,7 @@ public class DialogueTrigger : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" && doCancel)
         {
             BroadcastMessage("CancelDialogue");
         }
