@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: maya_Room3Base.ma
-//Last modified: Thu, Jun 05, 2025 07:10:03 PM
+//Last modified: Tue, Jun 10, 2025 06:04:01 PM
 //Codeset: 1252
 requires maya "2024";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "5.3.4.1";
@@ -11,7 +11,7 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "F593D421-45FF-AEA9-365E-F4B8737EEC15";
+fileInfo "UUID" "B804BBBC-43D1-6455-A10B-269DF7832112";
 createNode transform -s -n "persp";
 	rename -uid "8A244CD9-4E6D-E188-E2F6-90A7965826E6";
 	setAttr ".v" no;
@@ -318,20 +318,20 @@ createNode mesh -n "Room3Shape" -p "Room3";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "40811982-4943-C753-15A2-74B9F9EC434F";
+	rename -uid "2954A988-4DA7-0F1E-01D3-B0B004B8C069";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "31A452A0-4B45-36E0-AD5F-F6B1C6843D59";
+	rename -uid "5812C701-4579-78A7-E783-4EAC9552C868";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "A99B79A1-4BFA-9C49-C4CC-9A88E7AF52A5";
+	rename -uid "D0B0C05A-4110-1D42-F7AB-6CAAA2605384";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "3271A236-42F4-8071-3D70-AC90ADEA041E";
+	rename -uid "C064C030-43C2-73E4-58E8-0E806D5DBE9C";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "0509969C-41B6-61CA-8B89-BFA6CB6CA4B2";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "28762C98-4166-B5BF-05F8-D39F33787F63";
+	rename -uid "76EE63CC-4F66-80C8-D8C0-B6883E9A9E3A";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "C9FED0DB-43FD-3402-4158-2FA03E223B10";
 	setAttr ".g" yes;
@@ -410,7 +410,7 @@ createNode groupId -n "groupId11";
 	rename -uid "CCA63B10-4097-35C4-EF96-EE8F189CECF3";
 	setAttr ".ihi" 0;
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "C4E98412-447A-F76A-E4BD-C1A45D8605FF";
+	rename -uid "F340E714-4A8A-3F1D-7356-87AE496A73B0";
 	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr ".o" 0;
