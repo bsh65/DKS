@@ -55,7 +55,6 @@ public class DialogueContainer : MonoBehaviour
 
     public void CancelDialogue()
     {
-
         if (trigger)
         {
             Reset();
