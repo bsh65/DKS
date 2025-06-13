@@ -7627,13 +7627,15 @@ ParticleSystemRenderer:
   m_RenderAlignment: 0
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
-  m_UseCustomVertexStreams: 1
   m_EnableGPUInstancing: 1
   m_ApplyActiveColorSpace: 1
   m_AllowRoll: 1
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
+  m_UseCustomVertexStreams: 1
   m_VertexStreams: 00010304
+  m_UseCustomTrailVertexStreams: 0
+  m_TrailVertexStreams: 00010304
   m_Mesh: {fileID: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
@@ -10859,13 +10861,15 @@ ParticleSystemRenderer:
   m_RenderAlignment: 0
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
-  m_UseCustomVertexStreams: 1
   m_EnableGPUInstancing: 1
   m_ApplyActiveColorSpace: 1
   m_AllowRoll: 1
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
+  m_UseCustomVertexStreams: 1
   m_VertexStreams: 00010304
+  m_UseCustomTrailVertexStreams: 0
+  m_TrailVertexStreams: 00010304
   m_Mesh: {fileID: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
@@ -17427,13 +17431,15 @@ ParticleSystemRenderer:
   m_RenderAlignment: 0
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
-  m_UseCustomVertexStreams: 1
   m_EnableGPUInstancing: 1
   m_ApplyActiveColorSpace: 1
   m_AllowRoll: 1
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
+  m_UseCustomVertexStreams: 1
   m_VertexStreams: 00010304
+  m_UseCustomTrailVertexStreams: 0
+  m_TrailVertexStreams: 00010304
   m_Mesh: {fileID: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
@@ -27675,6 +27681,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1154876909}
+    - target: {fileID: 1430545588350554320, guid: ecd67b0a2d5903e48a9b255556b4e6d9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6407ffe6275e8df4aa2fb176f4e9e9d3, type: 2}
     - target: {fileID: 1512872354022359693, guid: ecd67b0a2d5903e48a9b255556b4e6d9, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -27683,15 +27693,35 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 6407ffe6275e8df4aa2fb176f4e9e9d3, type: 2}
+    - target: {fileID: 1687265822922897573, guid: ecd67b0a2d5903e48a9b255556b4e6d9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6407ffe6275e8df4aa2fb176f4e9e9d3, type: 2}
+    - target: {fileID: 2458214143195601669, guid: ecd67b0a2d5903e48a9b255556b4e6d9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6407ffe6275e8df4aa2fb176f4e9e9d3, type: 2}
     - target: {fileID: 2486356544947855916, guid: ecd67b0a2d5903e48a9b255556b4e6d9, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1062899070}
+    - target: {fileID: 2651690176826373238, guid: ecd67b0a2d5903e48a9b255556b4e6d9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6407ffe6275e8df4aa2fb176f4e9e9d3, type: 2}
     - target: {fileID: 3024022305236769814, guid: ecd67b0a2d5903e48a9b255556b4e6d9, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1154876909}
+    - target: {fileID: 3954457355408774501, guid: ecd67b0a2d5903e48a9b255556b4e6d9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6407ffe6275e8df4aa2fb176f4e9e9d3, type: 2}
     - target: {fileID: 4282113975084515926, guid: ecd67b0a2d5903e48a9b255556b4e6d9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6407ffe6275e8df4aa2fb176f4e9e9d3, type: 2}
+    - target: {fileID: 4454635874968127073, guid: ecd67b0a2d5903e48a9b255556b4e6d9, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 6407ffe6275e8df4aa2fb176f4e9e9d3, type: 2}
@@ -27763,6 +27793,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1327286226}
+    - target: {fileID: 6037148793651526152, guid: ecd67b0a2d5903e48a9b255556b4e6d9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6407ffe6275e8df4aa2fb176f4e9e9d3, type: 2}
+    - target: {fileID: 6086906406525688525, guid: ecd67b0a2d5903e48a9b255556b4e6d9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6407ffe6275e8df4aa2fb176f4e9e9d3, type: 2}
     - target: {fileID: 6384261474551207633, guid: ecd67b0a2d5903e48a9b255556b4e6d9, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -27775,6 +27813,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1327286226}
+    - target: {fileID: 7024587826782839314, guid: ecd67b0a2d5903e48a9b255556b4e6d9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6407ffe6275e8df4aa2fb176f4e9e9d3, type: 2}
     - target: {fileID: 7092068623342449367, guid: ecd67b0a2d5903e48a9b255556b4e6d9, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -27823,13 +27865,17 @@ PrefabInstance:
       propertyPath: m_UnmodifiedMeshVersion
       value: 3746
       objectReference: {fileID: 0}
+    - target: {fileID: 8987836018767818052, guid: ecd67b0a2d5903e48a9b255556b4e6d9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6407ffe6275e8df4aa2fb176f4e9e9d3, type: 2}
     m_RemovedComponents:
     - {fileID: 609797163016742838, guid: ecd67b0a2d5903e48a9b255556b4e6d9, type: 3}
     m_RemovedGameObjects:
     - {fileID: 767885382059479987, guid: ecd67b0a2d5903e48a9b255556b4e6d9, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 5560623747108889389, guid: ecd67b0a2d5903e48a9b255556b4e6d9, type: 3}
-      insertIndex: 4
+      insertIndex: -1
       addedObject: {fileID: 248997743}
     - targetCorrespondingSourceObject: {fileID: 5560623747108889389, guid: ecd67b0a2d5903e48a9b255556b4e6d9, type: 3}
       insertIndex: -1
